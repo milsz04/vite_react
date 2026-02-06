@@ -1,0 +1,45 @@
+.app-grid {
+  display: grid;
+  height: 100vh;
+  grid-template-areas:
+    "menu menu"
+    "main details"
+    "footer footer";
+  grid-template-rows: 60px 1fr 40px;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.menu-area { grid-area: menu; background-color: #1f2937; border-radius: 12px; display: flex; align-items: center; padding: 0 20px; }
+.footer-area { grid-area: footer; background-color: #1f2937; border-radius: 12px; display: flex; justify-content: center; align-items: center; }
+
+.main-panel-area {
+  grid-area: main;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.details-panel-area {
+  grid-area: details;
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+}
+.app-logo, .footer-logo {
+  max-height: 40px !important;
+  width: auto;
+  object-fit: contain;
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: 500;
+}
+.nav-link:hover { color: #60a5fa; }
